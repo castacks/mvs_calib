@@ -1,4 +1,4 @@
-# mvs_calib0 #
+# mvs_calib #
 
 __NOTE__: This ROS package is supposed to hold the calibration results of the real robots. 
 
