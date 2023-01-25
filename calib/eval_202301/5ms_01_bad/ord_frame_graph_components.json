@@ -1,0 +1,110 @@
+{
+    "frames": [
+        {
+            "name": "kam0",
+            "comment": "Kalibr Frame kam0"
+        },
+        {
+            "name": "cif1",
+            "comment": "Camera Image Frame cif1 from Kalibr"
+        },
+        {
+            "name": "kam1",
+            "comment": "Kalibr Frame kam1"
+        },
+        {
+            "name": "cif2",
+            "comment": "Camera Image Frame cif2 from Kalibr"
+        },
+        {
+            "name": "kam2",
+            "comment": "Kalibr Frame kam2"
+        },
+        {
+            "name": "cif0",
+            "comment": "Camera Image Frame cif0 from Kalibr"
+        }
+    ],
+    "transforms": [
+        {
+            "f0": "kam0",
+            "f1": "cif1",
+            "pose": {
+                "type": "create",
+                "position": [0.0, 0.0, 0.0],
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                        1.0, 0.0, 0.0, 
+                        0.0, 1.0, 0.0, 
+                        0.0, 0.0, 1.0
+                    ]
+                }
+            }
+        },
+        {
+            "f0": "kam1",
+            "f1": "cif2",
+            "pose": {
+                "type": "create",
+                "position": [0.0, 0.0, 0.0],
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                        1.0, 0.0, 0.0, 
+                        0.0, 1.0, 0.0, 
+                        0.0, 0.0, 1.0
+                    ]
+                }
+            }
+        },
+        {
+            "f0": "kam1",
+            "f1": "kam0",
+            "pose": {
+                "type": "create",
+                "position": [-0.30110466480255127, 0.0019573508761823177, -0.0022061935160309076],
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                        0.9999123215675354, 0.013241291046142578, -1.4369373275258113e-05, 
+                        -0.013241291046142578, 0.9999100565910339, -0.00212966394610703, 
+                        -1.3831417163601145e-05, 0.0021296674385666847, 0.9999977350234985
+                    ]
+                }
+            }
+        },
+        {
+            "f0": "kam2",
+            "f1": "cif0",
+            "pose": {
+                "type": "create",
+                "position": [0.0, 0.0, 0.0],
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                        1.0, 0.0, 0.0, 
+                        0.0, 1.0, 0.0, 
+                        0.0, 0.0, 1.0
+                    ]
+                }
+            }
+        },
+        {
+            "f0": "kam2",
+            "f1": "kam1",
+            "pose": {
+                "type": "create",
+                "position": [0.15078748762607574, -0.3605186343193054, 0.0052032470703125],
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                        0.9999729990959167, -0.007065384183079004, 0.0020328720565885305, 
+                        0.007037255447357893, 0.999883770942688, 0.013526503928005695, 
+                        -0.002128205494955182, -0.013511832803487778, 0.9999064207077026
+                    ]
+                }
+            }
+        }
+    ]
+}

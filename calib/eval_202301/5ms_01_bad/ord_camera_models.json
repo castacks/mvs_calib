@@ -1,0 +1,52 @@
+{
+    "camera_models": {
+        "cam_model_cif1": {
+            "type": "DoubleSphere",
+            "xi": -0.16416758176429075,
+            "alpha": 0.6009169513000963,
+            "fx": 244.23000742530968,
+            "fy": 245.29235289224118,
+            "cx": 604.2883140772777,
+            "cy": 500.8844538405538,
+            "fov_degree": 195.0,
+            "shape_struct": {
+                "H": 1028,
+                "W": 1224
+            },
+            "in_to_tensor": true,
+            "out_to_numpy": false
+        },
+        "cam_model_cif2": {
+            "type": "DoubleSphere",
+            "xi": -0.19814111736700082,
+            "alpha": 0.5908449207636574,
+            "fx": 234.19425410159212,
+            "fy": 235.03207935354706,
+            "cx": 607.6542905528722,
+            "cy": 509.5550290350179,
+            "fov_degree": 195.0,
+            "shape_struct": {
+                "H": 1028,
+                "W": 1224
+            },
+            "in_to_tensor": true,
+            "out_to_numpy": false
+        },
+        "cam_model_cif0": {
+            "type": "DoubleSphere",
+            "xi": -0.1977344487929194,
+            "alpha": 0.591521441430795,
+            "fx": 235.01332284240303,
+            "fy": 235.8705424680472,
+            "cx": 606.7904150417627,
+            "cy": 509.66145171681734,
+            "fov_degree": 195.0,
+            "shape_struct": {
+                "H": 1028,
+                "W": 1224
+            },
+            "in_to_tensor": true,
+            "out_to_numpy": false
+        }
+    }
+}
