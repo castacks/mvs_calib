@@ -1,0 +1,91 @@
+{
+    "calib_cam_frame": "cif0",
+    "frames": [
+        {
+            "name": "rbf",
+            "comment": "Rig Body Frame. "
+        },
+        {
+            "name": "rpf",
+            "comment": "Rig Ponorama Frame. "
+        },
+        {
+            "name": "cbf0",
+            "comment": "Camera Body Frame 0. "
+        },
+        {
+            "name": "cpf0",
+            "comment": "Camera Panorama Frame 0. "
+        },
+        {
+            "name": "cif0",
+            "comment": "Camera Image Frame 0. "
+        }
+    ],
+    "typical_poses": {
+        "T_body_panorama": {
+            "position": [ 0.0, 0.0, 0.0 ],
+            "orientation": {
+                "type": "rotation_matrix",
+                "data": [
+                    0.0, 0.0, -1.0,
+                    -1.0, 0.0, 0.0,
+                    0.0, 1.0, 0.0
+                ]
+            }
+        },
+        "T_body_image": {
+            "position": [ 0.0, 0.0, 0.0 ],
+            "orientation": {
+                "type": "rotation_matrix",
+                "data": [
+                    0.0, 0.0, 1.0,
+                    1.0, 0.0, 0.0,
+                    0.0, 1.0, 0.0
+                ]
+            }
+        }
+    },
+    "transforms": [
+        {
+            "f0": "rbf",
+            "f1": "rpf",
+            "pose": {
+                "type": "reference",
+                "key": "T_body_panorama"
+            }
+        },
+        {
+            "f0": "rbf",
+            "f1": "cbf0",
+            "pose": {
+                "type": "create",
+                "position": [0.0, 0.0, 0.0],
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                        0.0,  0.0, -1.0,
+                        0.0, -1.0,  0.0,
+                       -1.0,  0.0,  0.0
+                    ]
+                }
+            }
+        },
+        {
+            "f0": "cbf0",
+            "f1": "cpf0",
+            "pose": {
+                "type": "reference",
+                "key": "T_body_panorama"
+            }
+        },
+        {
+            "f0": "cbf0",
+            "f1": "cif0",
+            "pose": {
+                "type": "reference",
+                "key": "T_body_image"
+            }
+        }
+    ]
+}
