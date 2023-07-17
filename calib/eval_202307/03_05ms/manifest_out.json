@@ -1,0 +1,147 @@
+{
+    "dataset_name":"AllEnv_AllImgs",
+    "chosen_date":"03302023",
+    "max_easy_trajs_per_env": 100,
+    "max_hard_trajs_per_env": 100,
+    "max_frames_per_traj": 10000,
+    "storage_path":"",
+    "raw_environment_dirs":[],
+    "camera_models": {
+        "cam_model_cif2": {
+            "type": "DoubleSphere",
+            "xi": -0.19201647627340088,
+            "alpha": 0.5936112319073433,
+            "fx": 236.56688833674508,
+            "fy": 237.477869061023,
+            "cx": 606.0625177183193,
+            "cy": 501.46107418758805,
+            "fov_degree": 195.0,
+            "shape_struct": {
+                "H": 1028,
+                "W": 1224
+            },
+            "in_to_tensor": true,
+            "out_to_numpy": false
+        },
+        "cam_model_cif1": {
+            "type": "DoubleSphere",
+            "xi": -0.19707286467181095,
+            "alpha": 0.5921287346186913,
+            "fx": 234.9597018206096,
+            "fy": 235.84346932921812,
+            "cx": 606.8235817380444,
+            "cy": 508.90194952261993,
+            "fov_degree": 195.0,
+            "shape_struct": {
+                "H": 1028,
+                "W": 1224
+            },
+            "in_to_tensor": true,
+            "out_to_numpy": false
+        },
+        "cam_model_cif0": {
+            "type": "DoubleSphere",
+            "xi": -0.19454529254240757,
+            "alpha": 0.5923473155852407,
+            "fx": 235.48792475895905,
+            "fy": 236.39376653424492,
+            "cx": 606.4231301998961,
+            "cy": 510.0633781408762,
+            "fov_degree": 195.0,
+            "shape_struct": {
+                "H": 1028,
+                "W": 1224
+            },
+            "in_to_tensor": true,
+            "out_to_numpy": false
+        }
+    },
+    "__comment__": "The raw_camera must be consistent with the directory names in the raw data. ",
+    "__comment2__": "The raw_camera must be consistent with the metadata, because the mvs model's grid maker builder relies on this. ",
+    "samplers": [
+        {
+            "description": "cam0 fisheye RGB sampler",
+            "table_header": "cam0_rgb_fisheye",
+            "raw_camera": "cam0",
+            "raw_image_suffix": "Scene",
+            "output_dir": "cam0",
+            "output_image_suffix": "Fisheye",
+            "image_reader": "rgb_siximg",
+            "interpolation": "linear",
+            "write_valid_mask": true,
+            "mvs_main_cam_model_for_cam": true,
+            "mvs_cam_key": "cam0",
+            "sampler": {
+                "type": "SixPlanarTorch",
+                "cam_model_key": "cam_model_cif0",
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                         1.0,  0.0,  0.0,
+                         0.0,  1.0,  0.0,
+                         0.0,  0.0,  1.0
+                    ],
+                    "f0": "cif",
+                    "f1": "fisheye"
+                },
+                "default_invalid_value": 0
+            }
+        },
+        {
+            "description": "cam1 fisheye RGB sampler",
+            "table_header": "cam1_rgb_fisheye",
+            "raw_camera": "cam1",
+            "raw_image_suffix": "Scene",
+            "output_dir": "cam1",
+            "output_image_suffix": "Fisheye",
+            "image_reader": "rgb_siximg",
+            "interpolation": "linear",
+            "write_valid_mask": true,
+            "mvs_main_cam_model_for_cam": true,
+            "mvs_cam_key": "cam1",
+            "sampler": {
+                "type": "SixPlanarTorch",
+                "cam_model_key": "cam_model_cif1",
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                         1.0,  0.0,  0.0,
+                         0.0,  1.0,  0.0,
+                         0.0,  0.0,  1.0
+                    ],
+                    "f0": "cif",
+                    "f1": "fisheye"
+                },
+                "default_invalid_value": 0
+            }
+        },
+        {
+            "description": "cam2 fisheye RGB sampler",
+            "table_header": "cam2_rgb_fisheye",
+            "raw_camera": "cam2",
+            "raw_image_suffix": "Scene",
+            "output_dir": "cam2",
+            "output_image_suffix": "Fisheye",
+            "image_reader": "rgb_siximg",
+            "interpolation": "linear",
+            "write_valid_mask": true,
+            "mvs_main_cam_model_for_cam": true,
+            "mvs_cam_key": "cam2",
+            "sampler": {
+                "type": "SixPlanarTorch",
+                "cam_model_key": "cam_model_cif2",
+                "orientation": {
+                    "type": "rotation_matrix",
+                    "data": [
+                         1.0,  0.0,  0.0,
+                         0.0,  1.0,  0.0,
+                         0.0,  0.0,  1.0
+                    ],
+                    "f0": "cif",
+                    "f1": "fisheye"
+                },
+                "default_invalid_value": 0
+            }
+        }
+    ]
+}
